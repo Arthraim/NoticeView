@@ -218,12 +218,12 @@
     if (nil == self.noticeView) {
         
         // Set default values if needed
-        if (nil == title) title = @"Unknown Error";
-        if (nil == message) message = @"Information not provided.";
+        if (nil == title) title = @"未知错误";
+        if (nil == message) message = @"没有更多描述信息";
         if (0.0 == duration) duration = 0.5;
         if ((0.0 == delay) && (WBNoticeViewTypeSticky != noticeType)) delay = 2.0;
         if (0.0 == alpha) alpha = 1.0;
-        if (origin < 0.0) origin = 0.0;
+//        if (origin < 0.0) origin = 0.0;
         
         switch (noticeType) {
             case WBNoticeViewTypeError:
