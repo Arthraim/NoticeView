@@ -224,6 +224,10 @@
         if ((0.0 == delay) && (WBNoticeViewTypeSticky != noticeType)) delay = 2.0;
         if (0.0 == alpha) alpha = 1.0;
 //        if (origin < 0.0) origin = 0.0;
+        if ([view isKindOfClass:UIScrollView.class]) {
+            UIScrollView *scrollView = (UIScrollView *)view;
+            origin = scrollView.contentOffset.y;
+        }
         
         switch (noticeType) {
             case WBNoticeViewTypeError:
